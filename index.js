@@ -12,13 +12,14 @@
 // QUESTION 1: Add a property called "name" to the "myBunny" object below and assign it some value (e.g. "Thumper")
 
 const myBunny = {
+  name: 'Gary Busey',
   species: 'rabbit',
   message: "I'm a bunny, hear me roar!",
 }
 
 // Next, assign the "name" property from "myBunny" object to the "bunnyName" variable below
 
-let bunnyName;
+let bunnyName = myBunny.name;
 
 //NO EXAMPLE for Question 1 as the output would give away the answers
 
@@ -31,7 +32,7 @@ let bunnyName;
 // My name is Thumper. I'm a bunny, hear me roar!
 
 myBunny.speak = function() {
-  
+  return `My name is ${bunnyName}. I'm a bunny, hear me roar!`
 }
 
 
@@ -45,9 +46,11 @@ myBunny.speak = function() {
 // OR console.log("testing out my function for Q3: ", isAnimalSpecies(myBunny, 'rabbit'));
 // true
 
-const isAnimalSpecies = (animal, species) => {
-
-}
+const isAnimalSpecies = (myBunny, species) => {
+  if(myBunny.species !== species) {
+    return false;
+  } return true;
+};
 
 
 
@@ -93,10 +96,11 @@ const library = [
 //   { title: 'Alchemist', author: 'Paulo Coelho', libraryID: 4266 }
 // ]
 
-const sortArray = () => {
- 
+const sortArray = (library) => {
+  return library.sort( (a, b) => a.libraryID - b.libraryID)
 }
 
+// sortArray(library)
 
 // QUESTION 5: Write a function called "addTypeProperty" that takes one Array parameter and returns a new Array where each Object has a new property called "type" with value "book"
 // BONUS: use `map()` method
