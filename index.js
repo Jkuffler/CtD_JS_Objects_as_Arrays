@@ -135,9 +135,10 @@ const sortArray = (library) => {
 //   }
 // ]
 
-const addTypeProperty = () => {
-  
-}
+const addTypeProperty = (arry) => {
+  arry.map(e => e.type = 'book')
+  return  arry
+} /* This simple solution can scale and is huge in web development */
 
 
 // QUESTION 6: Write a function called "addNewObject" that takes one Array parameter and one Object parameter and returns a new Array with the new Object inserted at the end
@@ -159,8 +160,10 @@ const addTypeProperty = () => {
 //   { title: 'The Wizard of Oz', author: 'L. Frank Baum', libraryID: 9876 }
 // ]
 
-const addNewObject = () => {
-  
+
+const addNewObject = (arr, obj = {title : 'Accidents Happen', author : 'Gary Busey', libraryID : 1029}) => {
+  arr.push(obj)
+  return arr
 }
 
 
